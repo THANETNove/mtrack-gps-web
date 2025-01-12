@@ -103,7 +103,9 @@
                 <div class="container">
                     <div class="row align-items-center text-center justify-content-center">
                         <div class="col-md-8">
-                            <a data-fancybox data-ratio="2" href="https://vimeo.com/317571768" class="play-button d-block">
+                            <a data-fancybox data-ratio="2"
+                                href="https://www.youtube.com/watch?v=dQ1U2SGgoAg&list=RDu233DxkQtwc&index=23"
+                                class="play-button d-block">
                                 <span class="icon-play"></span>
                             </a>
                             <h1 class="text-uppercase">Interior Design</h1>
@@ -163,7 +165,8 @@
                 <div class="container">
                     <div class="row align-items-center mb-5 pb-5">
                         <div class="col-lg-7 img-years mb-5 mb-lg-0">
-                            <img src="{{ URL::asset('/assets/frontend/images/hero_bg_1.jpg') }}" alt="Image" class="img-fluid">
+                            <img src="{{ URL::asset('/assets/frontend/images/hero_bg_1.jpg') }}" alt="Image"
+                                class="img-fluid">
                         </div>
                         <div class="col-lg-4 ml-auto">
                             <span class="sub-title">Learn To Know</span>
@@ -399,7 +402,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 mb-5 mb-lg-0">
-                            <img src="{{ URL::asset('/assets/frontend/images/about_2.jpg') }}" alt="Image" class="img-fluid">
+                            <img src="{{ URL::asset('/assets/frontend/images/about_2.jpg') }}" alt="Image"
+                                class="img-fluid">
                         </div>
 
                         <div class="col-lg-6 ml-auto pl-lg-5">
@@ -529,7 +533,8 @@
                 <div class="nonloop-block-13 owl-carousel">
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/frontend/images/person_1.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_1.jpg') }}" alt="Image"
+                            class="img-fluid">
                         <h3>Cloe Marena</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non eligendi
@@ -538,7 +543,8 @@
                     </div>
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/frontend/images/person_2.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_2.jpg') }}" alt="Image"
+                            class="img-fluid">
                         <h3>Nathalie Channie</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Eveniet, laboriosam impedit facilis. Voluptatem, repudiandae eligendi maiores sunt
@@ -547,7 +553,8 @@
                     </div>
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/frontend/images/person_3.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_3.jpg') }}" alt="Image"
+                            class="img-fluid">
                         <h3>Will Turner</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Laboriosam nisi natus quos soluta blanditiis iste in distinctio fugiat perferendis,
@@ -557,7 +564,8 @@
                     </div>
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/frontend/images/person_4.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_4.jpg') }}" alt="Image"
+                            class="img-fluid">
                         <h3>Nicolas Stainer</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Voluptatibus sed vero corporis reiciendis, ducimus iste aliquam doloribus voluptas nam

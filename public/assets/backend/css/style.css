@@ -22246,5 +22246,18 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   color: #fff;
 }
 
+.editor {
+  height: 400px !important;
+  /* Set the desired height */
+}
+
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable,
+.ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+  border-radius: var(--ck-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  min-height: 300px !important;
+}
+
 
 /*# sourceMappingURL=style.css.map */
