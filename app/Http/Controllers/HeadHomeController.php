@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\HeadHome;
+use Illuminate\Support\Carbon; // เพิ่มเพื่อใช้งาน Carbon
+
+
 
 class HeadHomeController extends Controller
 {
@@ -45,16 +48,11 @@ class HeadHomeController extends Controller
         $member->url = $request['url'];
 
 
-        $dateImg = [];
-        if ($request->hasFile('image')) {
-            $imagefile = $request->file('image');
-
-            foreach ($imagefile as $image) {
-                $data =   $image->move(public_path() . '/backend/imgs/', $randomText . "" . $image->getClientOriginalName());
-                $dateImg[] =  $randomText . "" . $image->getClientOriginalName();
-            }
-        }
-        $member->image = json_encode($dateImg);
+        $file = $request->file('image');
+        $filename = date('i_d_m_Y') . '_' . time() . '.' . $file->getClientOriginalExtension();
+        $filePath = '/assets/img/profile/' . $filename;
+        $file->move(public_path('/assets/backend/images/imgs/'), $filename);
+        $member->image = $filePath;
         $member->save();
 
 
