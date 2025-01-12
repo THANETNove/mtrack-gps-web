@@ -98,7 +98,7 @@
             </div>
 
             <div class="site-blocks-cover overlay"
-                style="background-image: url('{{ URL::asset('/assets/images/hero_bg_1.jpg') }}');" data-aos="fade"
+                style="background-image: url('{{ URL::asset('/assets/frontend/images/hero_bg_1.jpg') }}');" data-aos="fade"
                 data-stellar-background-ratio="0.5"id="home-section">
                 <div class="container">
                     <div class="row align-items-center text-center justify-content-center">
@@ -163,7 +163,7 @@
                 <div class="container">
                     <div class="row align-items-center mb-5 pb-5">
                         <div class="col-lg-7 img-years mb-5 mb-lg-0">
-                            <img src="{{ URL::asset('/assets/images/hero_bg_1.jpg') }}" alt="Image" class="img-fluid">
+                            <img src="{{ URL::asset('/assets/frontend/images/hero_bg_1.jpg') }}" alt="Image" class="img-fluid">
                         </div>
                         <div class="col-lg-4 ml-auto">
                             <span class="sub-title">Learn To Know</span>
@@ -203,7 +203,7 @@
                             <div class="person">
                                 <div class="bio-img">
                                     <figure>
-                                        <img src="{{ URL::asset('/assets/images/person_1.jpg') }}" alt="Image"
+                                        <img src="{{ URL::asset('/assets/frontend/images/person_1.jpg') }}" alt="Image"
                                             class="img-fluid">
                                     </figure>
                                     <div class="social">
@@ -223,7 +223,7 @@
                             <div class="person">
                                 <div class="bio-img">
                                     <figure>
-                                        <img src="{{ URL::asset('/assets/images/person_2.jpg') }}" alt="Image"
+                                        <img src="{{ URL::asset('/assets/frontend/images/person_2.jpg') }}" alt="Image"
                                             class="img-fluid">
                                     </figure>
                                     <div class="social">
@@ -244,7 +244,7 @@
                             <div class="person">
                                 <div class="bio-img">
                                     <figure>
-                                        <img src="{{ URL::asset('/assets/images/person_3.jpg') }}" alt="Image"
+                                        <img src="{{ URL::asset('/assets/frontend/images/person_3.jpg') }}" alt="Image"
                                             class="img-fluid">
                                     </figure>
                                     <div class="social">
@@ -264,7 +264,7 @@
                             <div class="person">
                                 <div class="bio-img">
                                     <figure>
-                                        <img src="{{ URL::asset('/assets/images/person_4.jpg') }}" alt="Image"
+                                        <img src="{{ URL::asset('/assets/frontend/images/person_4.jpg') }}" alt="Image"
                                             class="img-fluid">
                                     </figure>
                                     <div class="social">
@@ -284,7 +284,7 @@
                             <div class="person">
                                 <div class="bio-img">
                                     <figure>
-                                        <img src="{{ URL::asset('/assets/images/person_5.jpg') }}" alt="Image"
+                                        <img src="{{ URL::asset('/assets/frontend/images/person_5.jpg') }}" alt="Image"
                                             class="img-fluid">
                                     </figure>
                                     <div class="social">
@@ -304,7 +304,7 @@
                             <div class="person">
                                 <div class="bio-img">
                                     <figure>
-                                        <img src="{{ URL::asset('/assets/images/person_6.jpg') }}" alt="Image"
+                                        <img src="{{ URL::asset('/assets/frontend/images/person_6.jpg') }}" alt="Image"
                                             class="img-fluid">
                                     </figure>
                                     <div class="social">
@@ -399,7 +399,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 mb-5 mb-lg-0">
-                            <img src="{{ URL::asset('/assets/images/about_2.jpg') }}" alt="Image" class="img-fluid">
+                            <img src="{{ URL::asset('/assets/frontend/images/about_2.jpg') }}" alt="Image" class="img-fluid">
                         </div>
 
                         <div class="col-lg-6 ml-auto pl-lg-5">
@@ -529,7 +529,7 @@
                 <div class="nonloop-block-13 owl-carousel">
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/images/person_1.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_1.jpg') }}" alt="Image" class="img-fluid">
                         <h3>Cloe Marena</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium non eligendi
@@ -538,7 +538,7 @@
                     </div>
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/images/person_2.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_2.jpg') }}" alt="Image" class="img-fluid">
                         <h3>Nathalie Channie</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Eveniet, laboriosam impedit facilis. Voluptatem, repudiandae eligendi maiores sunt
@@ -547,7 +547,7 @@
                     </div>
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/images/person_3.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_3.jpg') }}" alt="Image" class="img-fluid">
                         <h3>Will Turner</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Laboriosam nisi natus quos soluta blanditiis iste in distinctio fugiat perferendis,
@@ -557,7 +557,7 @@
                     </div>
 
                     <div class="testimony px-5">
-                        <img src="{{ URL::asset('/assets/images/person_4.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ URL::asset('/assets/frontend/images/person_4.jpg') }}" alt="Image" class="img-fluid">
                         <h3>Nicolas Stainer</h3>
                         <span class="sub-title">Owner of Building Co.</span>
                         <p>&ldquo;<em>Voluptatibus sed vero corporis reiciendis, ducimus iste aliquam doloribus voluptas nam
@@ -581,27 +581,27 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4 project-entry">
-                            <a href="{{ URL::asset('/assets/images/img_1.jpg') }}" class="d-block figure"
+                            <a href="{{ URL::asset('/assets/frontend/images/img_1.jpg') }}" class="d-block figure"
                                 data-fancybox="gallery">
-                                <img src="{{ URL::asset('/assets/images/img_1.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_1.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <h3 class="mb-0"><a href="#">Butterfly House</a></h3>
                             <span class="text-muted">Interior</span>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 project-entry">
-                            <a href="{{ URL::asset('/assets/images/img_2.jpg') }}" class="d-block figure"
+                            <a href="{{ URL::asset('/assets/frontend/images/img_2.jpg') }}" class="d-block figure"
                                 data-fancybox="gallery">
-                                <img src="{{ URL::asset('/assets/images/img_2.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_2.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <h3 class="mb-0"><a href="#">Interior Bed Design</a></h3>
                             <span class="text-muted">Design</span>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 project-entry">
-                            <a href="{{ URL::asset('/assets/images/img_3.jpg') }}" class="d-block figure"
+                            <a href="{{ URL::asset('/assets/frontend/images/img_3.jpg') }}" class="d-block figure"
                                 data-fancybox="gallery">
-                                <img src="{{ URL::asset('/assets/images/img_3.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_3.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <h3 class="mb-0"><a href="#">Kitchen Sink Design</a></h3>
@@ -609,27 +609,27 @@
                         </div>
 
                         <div class="col-lg-4 col-md-6 mb-4 project-entry">
-                            <a href="{{ URL::asset('/assets/images/img_4.jpg') }}" class="d-block figure"
+                            <a href="{{ URL::asset('/assets/frontend/images/img_4.jpg') }}" class="d-block figure"
                                 data-fancybox="gallery">
-                                <img src="{{ URL::asset('/assets/images/img_4.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_4.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <h3 class="mb-0"><a href="#">Lobby Interior Design</a></h3>
                             <span class="text-muted">Interior</span>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 project-entry">
-                            <a href="{{ URL::asset('/assets/images/img_5.jpg') }}" class="d-block figure"
+                            <a href="{{ URL::asset('/assets/frontend/images/img_5.jpg') }}" class="d-block figure"
                                 data-fancybox="gallery">
-                                <img src="{{ URL::asset('/assets/images/img_5.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_5.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <h3 class="mb-0"><a href="#">Relaxation Room Design</a></h3>
                             <span class="text-muted">Design</span>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 project-entry">
-                            <a href="{{ URL::asset('/assets/images/img_6.jpg') }}" class="d-block figure"
+                            <a href="{{ URL::asset('/assets/frontend/images/img_6.jpg') }}" class="d-block figure"
                                 data-fancybox="gallery">
-                                <img src="{{ URL::asset('/assets/images/img_1.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_1.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <h3 class="mb-0"><a href="#">Butterfly House</a></h3>
@@ -653,7 +653,7 @@
                     <div class="row mb-5">
                         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
                             <a href="#" class="d-block figure">
-                                <img src="{{ URL::asset('/assets/images/img_1.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_1.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <span class="text-muted d-block mb-1">29, January 2019</span>
@@ -661,7 +661,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
                             <a href="#" class="d-block figure">
-                                <img src="{{ URL::asset('/assets/images/img_2.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_2.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <span class="text-muted d-block mb-1">29, January 2019</span>
@@ -669,7 +669,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
                             <a href="#" class="d-block figure">
-                                <img src="{{ URL::asset('/assets/images/img_3.jpg') }}" alt="Image"
+                                <img src="{{ URL::asset('/assets/frontend/images/img_3.jpg') }}" alt="Image"
                                     class="img-fluid">
                             </a>
                             <span class="text-muted d-block mb-1">29, January 2019</span>
@@ -871,7 +871,7 @@
                                         <li class="mb-3">
                                             <a href="#" class="d-flex">
                                                 <figure class="image mr-4">
-                                                    <img src="{{ URL::asset('/assets/images/img_2.jpg') }}"
+                                                    <img src="{{ URL::asset('/assets/frontend/images/img_2.jpg') }}"
                                                         alt="" class="img-fluid">
                                                 </figure>
                                                 <div class="text">
@@ -884,7 +884,7 @@
                                         <li class="mb-3">
                                             <a href="#" class="d-flex">
                                                 <figure class="image mr-4">
-                                                    <img src="{{ URL::asset('/assets/images/img_3.jpg') }}"
+                                                    <img src="{{ URL::asset('/assets/frontend/images/img_3.jpg') }}"
                                                         alt="" class="img-fluid">
                                                 </figure>
                                                 <div class="text">
@@ -897,7 +897,7 @@
                                         <li class="mb-3">
                                             <a href="#" class="d-flex">
                                                 <figure class="image mr-4">
-                                                    <img src="{{ URL::asset('/assets/images/img_4.jpg') }}"
+                                                    <img src="{{ URL::asset('/assets/frontend/images/img_4.jpg') }}"
                                                         alt="" class="img-fluid">
                                                 </figure>
                                                 <div class="text">
