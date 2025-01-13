@@ -260,6 +260,11 @@
                             <i class="icon-badge menu-icon"></i><span class="nav-text">บริการอื่น ๆ</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ url('carousel') }}" aria-expanded="false">
+                            <i class="icon-badge menu-icon"></i><span class="nav-text">Carousel</span>
+                        </a>
+                    </li>
                     {{--   <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>

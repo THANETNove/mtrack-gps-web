@@ -10,15 +10,14 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">บริการอื่น Table</h4>
-                        <a href="{{ url('service-feature-create') }}" class="btn mb-3  btn-info"> เพิ่ม บริการอื่น</a>
+                        <h4 class="card-title">carousel Table</h4>
+                        <a href="{{ url('carousel-create') }}" class="btn mb-3  btn-info"> เพิ่ม carousel</a>
 
                         <div class="table-responsive">
                             <table class="table table-bordered verticle-middle">
                                 <thead>
                                     <tr>
                                         <th scope="col">ภาพ</th>
-                                        <th scope="col">รายละเอียด</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -33,12 +32,9 @@
                                                     width="300" height="200">
 
                                             </td>
-                                            <td>
-                                                {!! $data->details !!}
 
-                                            </td>
 
-                                            <td><span><a href="{{ url('service-feature-edit', $data->id) }}"><i
+                                            <td><span><a href="{{ url('carousel-edit', $data->id) }}"><i
                                                             class="fa fa-pencil color-muted m-r-5"></i>
                                                     </a></span>
                                             </td>

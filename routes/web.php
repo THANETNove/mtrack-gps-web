@@ -5,6 +5,7 @@ use App\Http\Controllers\HeadHomeController;
 use App\Http\Controllers\CustomerServiceController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ServiceFeatureController;
+use App\Http\Controllers\CarouselController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,3 +36,9 @@ Route::get('/service-feature-create', [ServiceFeatureController::class, 'create'
 Route::post('/service-feature-store', [ServiceFeatureController::class, 'store'])->name('service-feature-store');
 Route::get('/service-feature-edit/{id}', [ServiceFeatureController::class, 'edit'])->name('service-feature-edit');
 Route::put('/service-feature-update/{id}', [ServiceFeatureController::class, 'update'])->name('service-feature-update');
+
+Route::get('/carousel', [CarouselController::class, 'index'])->name('carousel');
+Route::get('/carousel-create', [CarouselController::class, 'create'])->name('carousel-create');
+Route::post('/carousel-store', [CarouselController::class, 'store'])->name('carousel-store');
+Route::get('/carousel-edit/{id}', [CarouselController::class, 'edit'])->name('carousel-edit');
+Route::put('/carousel-update/{id}', [CarouselController::class, 'update'])->name('carousel-update');
