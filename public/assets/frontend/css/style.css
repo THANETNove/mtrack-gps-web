@@ -1866,6 +1866,13 @@ h6 {
   color: #fff;
 }
 
-
+span.headHome h1,
+span.headHome h2,
+span.headHome h3,
+span.headHome h4,
+span.headHome h5,
+span.headHome h6 {
+  color: #fff !important;
+}
 
 /*# sourceMappingURL=style.css.map */

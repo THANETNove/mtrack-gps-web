@@ -7,9 +7,12 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ServiceFeatureController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\SatisfiedController;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
-    return view('welcome');
+    $dataHeadHomes = DB::table('head_homes')
+        ->get();
+    return view('welcome', compact('dataHeadHomes'));
 });
 
 Auth::routes();

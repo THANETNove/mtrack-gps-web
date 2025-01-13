@@ -24,36 +24,36 @@
 
 
             <div class="site-navbar-wrap">
-                {{-- <div class="site-navbar-top">
+                <div class="site-navbar-top">
                     <div class="container py-3">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+                                {{--   <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
                                 <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
                                 <a href="#" class="p-2 pl-0"><span class="icon-linkedin"></span></a>
-                                <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+                                <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a> --}}
                             </div>
                             <div class="col-6">
                                 <div class="d-flex ml-auto">
                                     <a href="#" class="d-flex align-items-center ml-auto mr-4">
                                         <span class="icon-envelope mr-2"></span>
-                                        <span class="d-none d-md-inline-block">info@domain.com</span>
+                                        <span class="d-none d-md-inline-block">jomprasert11@gmail.com</span>
                                     </a>
-                                    <a href="#" class="d-flex align-items-center">
+                                    {{--  <a href="#" class="d-flex align-items-center">
                                         <span class="icon-phone mr-2"></span>
                                         <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
-                                    </a>
+                                    </a> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> --}}
+                </div>
 
                 <div class="site-navbar site-navbar-target js-sticky-header">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-2">
-                                <h1 class="my-0 site-logo"><a href="index.html">Archs</a></h1>
+                                <h1 class="my-0 site-logo"><a href="index.html">MTRACK GPS</a></h1>
                             </div>
                             <div class="col-10">
                                 <nav class="site-navigation text-right" role="navigation">
@@ -97,24 +97,26 @@
                 </div>
             </div>
 
-            <div class="site-blocks-cover overlay"
-                style="background-image: url('{{ URL::asset('/assets/frontend/images/hero_bg_1.jpg') }}');" data-aos="fade"
-                data-stellar-background-ratio="0.5"id="home-section">
-                <div class="container">
-                    <div class="row align-items-center text-center justify-content-center">
-                        <div class="col-md-8">
-                            <a data-fancybox data-ratio="2"
-                                href="https://www.youtube.com/watch?v=dQ1U2SGgoAg&list=RDu233DxkQtwc&index=23"
-                                class="play-button d-block">
-                                <span class="icon-play"></span>
-                            </a>
-                            <h1 class="text-uppercase">Interior Design</h1>
-                            <span class="sub-text mb-3 d-block"><em>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit. Quisquam molestiae ipsam, atque.</em></span>
+
+            @foreach ($dataHeadHomes as $headHome)
+                <div class="site-blocks-cover overlay" style="background-image: url('{{ URL::asset($headHome->image) }}');"
+                    data-aos="fade" data-stellar-background-ratio="0.5"id="home-section">
+                    <div class="container">
+                        <div class="row align-items-center text-center justify-content-center">
+                            <div class="col-md-8">
+                                @if ($headHome->url)
+                                    <a data-fancybox data-ratio="2" href="{{ $headHome->url }}" class="play-button d-block">
+                                        <span class="icon-play"></span>
+                                    </a>
+                                @endif
+
+                                <span class="headHome">{!! $headHome->details !!}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
+
 
 
             <div class="site-section  border-bottom">
