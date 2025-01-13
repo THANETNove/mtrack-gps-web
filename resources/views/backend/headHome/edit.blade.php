@@ -67,7 +67,7 @@
                                 </span>
                             @enderror
                             <div class="form-group mt-4">
-                                <button class="btn login-form__btn submit">Sign In</button>
+                                <button class="btn login-form__btn submit">Save</button>
 
                             </div>
 

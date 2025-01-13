@@ -17,14 +17,14 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-4">Head Home</h4>
-                        <form method="POST" action="{{ route('head-home-store') }}" enctype="multipart/form-data">
+                        <h4 class="card-title mb-4">บริการ</h4>
+                        <form method="POST" action="{{ route('customer-service-store') }}" enctype="multipart/form-data">
 
                             @csrf
                             <div class="basic-form mb-3">
 
                                 <div class="form-group">
-                                    <p id="errorMessage" class="mt-3">กรุณาอัปโหลดภาพขนาด 1900x1253
+                                    <p id="errorMessage" class="mt-3">กรุณาอัปโหลดภาพขนาด 56.01*65*56
                                         เท่านั้น</p>
                                     <input type="file" id="imageInput"
                                         class="form-control-file @error('image') is-invalid @enderror" name="image"
@@ -35,16 +35,7 @@
                                         </span>
                                     @enderror
                                 </div>
-                                <div class="form-group">
 
-                                    <input type="url" class="form-control @error('url') is-invalid @enderror"
-                                        name="url" placeholder="url video">
-                                    @error('url')
-                                        <span class="invalid-feedback mt-3" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
                                 <div class="form-group mt-3">
                                     <div id="imagePreview" style="margin-top: 15px;">
                                         <!-- Preview will be displayed here -->
