@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ServiceFeatureController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\SatisfiedController;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
@@ -18,7 +20,14 @@ Route::get('/', function () {
         ->get();
     $dataServiceFeatures = DB::table('service_features')
         ->get();
-    return view('welcome', compact('dataHeadHomes', 'dataCustomerServices', 'dataAboutUs', 'dataServiceFeatures'));
+    $dataCarousels = DB::table('carousels')
+        ->get();
+    $dataSatisfieds = DB::table('satisfieds')
+        ->get();
+    return view('welcome', compact('dataHeadHomes', 'dataCustomerServices', 'dataAboutUs', 'dataServiceFeatures', 'dataCarousels', 'dataSatisfieds'));
+});
+Route::post('/send-message', function (Request $request) {
+    dd($request->all());
 });
 
 Auth::routes();
