@@ -12,3 +12,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/head-home', [HeadHomeController::class, 'index'])->name('head-home');
 Route::post('/head-home-store', [HeadHomeController::class, 'store'])->name('head-home-store');
+Route::get('/head-home-edit/{id}', [HeadHomeController::class, 'edit'])->name('head-home-edit');
+Route::put('/head-home-update/{id}', [HeadHomeController::class, 'update'])->name('head-home-update');

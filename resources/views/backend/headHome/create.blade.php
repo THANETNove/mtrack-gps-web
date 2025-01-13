@@ -26,8 +26,9 @@
                                 <div class="form-group">
                                     <p id="errorMessage" class="mt-3">กรุณาอัปโหลดภาพขนาด 1900x1253
                                         เท่านั้น</p>
-                                    <input type="file" class="form-control-file @error('image') is-invalid @enderror"
-                                        name="image" placeholder="image" accept="image/*">
+                                    <input type="file" id="imageInput"
+                                        class="form-control-file @error('image') is-invalid @enderror" name="image"
+                                        placeholder="image" accept="image/*">
                                     @error('image')
                                         <span class="invalid-feedback mt-3" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -107,21 +108,22 @@
                     if (width === 1900 && height === 1253) {
                         document.getElementById('errorMessage').style.display = 'none';
                         console.log('ภาพมีขนาดถูกต้อง');
-                    } else {
-                        document.getElementById('errorMessage').style.display = 'block';
-                        event.target.value = ''; // ล้างค่าถ้าขนาดไม่ถูกต้อง
                     }
+                    /* else {
+                                           document.getElementById('errorMessage').style.display = 'block';
+                                           event.target.value = ''; // ล้างค่าถ้าขนาดไม่ถูกต้อง
+                                       } */
                 };
 
                 img.src = URL.createObjectURL(file); // โหลดภาพเพื่อตรวจสอบขนาด
             }
         });
 
-        document.getElementById('uploadForm').addEventListener('submit', function(event) {
-            if (document.getElementById('imageInput').value === '') {
-                event.preventDefault(); // ป้องกันการอัปโหลดถ้าภาพไม่ถูกต้อง
-                alert('กรุณาเลือกภาพที่มีขนาด 1900x1253');
-            }
-        });
+        /*  document.getElementById('uploadForm').addEventListener('submit', function(event) {
+             if (document.getElementById('imageInput').value === '') {
+                 event.preventDefault(); // ป้องกันการอัปโหลดถ้าภาพไม่ถูกต้อง
+                 alert('กรุณาเลือกภาพที่มีขนาด 1900x1253');
+             }
+         }); */
     </script>
 @endsection

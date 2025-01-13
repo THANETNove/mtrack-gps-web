@@ -22,9 +22,9 @@
                             <table class="table table-bordered verticle-middle">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Task</th>
-                                        <th scope="col">Progress</th>
-                                        <th scope="col">Deadline</th>
+                                        <th scope="col">#</th>
+                                        <th scope="col">ภาพ</th>
+                                        <th scope="col">รายละเอียด</th>
                                         <th scope="col">Label</th>
                                         <th scope="col">Action</th>
                                     </tr>

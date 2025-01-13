@@ -24,7 +24,7 @@
 
 
             <div class="site-navbar-wrap">
-                <div class="site-navbar-top">
+                {{-- <div class="site-navbar-top">
                     <div class="container py-3">
                         <div class="row align-items-center">
                             <div class="col-6">
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="site-navbar site-navbar-target js-sticky-header">
                     <div class="container">
