@@ -3,14 +3,15 @@
 @section('content')
     <div class="content-body">
 
-    
+        
+        <!-- row -->
 
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">AboutUs Table</h4>
-                        <a href="{{ url('about-us-create') }}" class="btn mb-3  btn-info"> เพิ่ม AboutUs</a>
+                        <h4 class="card-title">บริการอื่น Table</h4>
+                        <a href="{{ url('service-feature-create') }}" class="btn mb-3  btn-info"> เพิ่ม AboutUs</a>
 
                         <div class="table-responsive">
                             <table class="table table-bordered verticle-middle">

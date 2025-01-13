@@ -3,16 +3,18 @@
 @section('content')
     <div class="content-body">
 
- 
+
 
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-4">บริการ</h4>
-                        <form method="POST" action="{{ route('customer-service-store') }}" enctype="multipart/form-data">
+                        <h4 class="card-title mb-4">Edit AboutUs</h4>
+                        <form method="POST" action="{{ route('about-us-update', $dataHeadHomes->id) }}"
+                            enctype="multipart/form-data">
 
                             @csrf
+                            @method('PUT')
                             <div class="basic-form mb-3">
 
                                 <div class="form-group">
@@ -29,6 +31,10 @@
                                 </div>
 
                                 <div class="form-group mt-3">
+                                    @if ($dataHeadHomes->image)
+                                        <img src="{{ URL::asset($dataHeadHomes->image) }}" alt="Image" id="img-edit"
+                                            class="img-fluid" width="200" height="200">
+                                    @endif
                                     <div id="imagePreview" style="margin-top: 15px;">
                                         <!-- Preview will be displayed here -->
                                     </div>
@@ -37,7 +43,7 @@
                             </div>
                             <textarea class="form-control editor @error('details') is-invalid @enderror" style="height: 500px;"
                                 placeholder="รายละเอียด เขียนอิสระ เช่น สถานที่สำคัญ ใกล้เคียง หรือรายละเอียดอื่น ๆ ที่ไม่ได้กรอกไว้"
-                                name="details">{{ old('details') }} </textarea>
+                                name="details">{!! $dataHeadHomes->details !!} </textarea>
                             @error('details')
                                 <span class="invalid-feedback mt-3" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -75,6 +81,7 @@
                 };
 
                 reader.readAsDataURL(file);
+                document.getElementById('img-edit').style.display = 'none';
             }
         });
 
@@ -91,6 +98,8 @@
                     if (width === 1900 && height === 1253) {
                         document.getElementById('errorMessage').style.display = 'none';
                         console.log('ภาพมีขนาดถูกต้อง');
+
+
                     }
                     /* else {
                                            document.getElementById('errorMessage').style.display = 'block';

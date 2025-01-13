@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HeadHomeController;
 use App\Http\Controllers\CustomerServiceController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ServiceFeatureController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,3 +29,6 @@ Route::get('/about-us-create', [AboutUsController::class, 'create'])->name('abou
 Route::post('/about-us-store', [AboutUsController::class, 'store'])->name('about-us-store');
 Route::get('/about-us-edit/{id}', [AboutUsController::class, 'edit'])->name('about-us-edit');
 Route::put('/about-us-update/{id}', [AboutUsController::class, 'update'])->name('about-us-update');
+
+Route::get('/service-feature', [ServiceFeatureController::class, 'index'])->name('service-feature');
+Route::get('/service-feature-create', [ServiceFeatureController::class, 'create'])->name('service-feature-create');
