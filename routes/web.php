@@ -6,6 +6,7 @@ use App\Http\Controllers\CustomerServiceController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ServiceFeatureController;
 use App\Http\Controllers\CarouselController;
+use App\Http\Controllers\SatisfiedController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,3 +43,9 @@ Route::get('/carousel-create', [CarouselController::class, 'create'])->name('car
 Route::post('/carousel-store', [CarouselController::class, 'store'])->name('carousel-store');
 Route::get('/carousel-edit/{id}', [CarouselController::class, 'edit'])->name('carousel-edit');
 Route::put('/carousel-update/{id}', [CarouselController::class, 'update'])->name('carousel-update');
+
+Route::get('/satisfied', [SatisfiedController::class, 'index'])->name('satisfied');
+Route::get('/satisfied-create', [SatisfiedController::class, 'create'])->name('satisfied-create');
+Route::post('/satisfied-store', [SatisfiedController::class, 'store'])->name('satisfied-store');
+Route::get('/satisfied-edit/{id}', [SatisfiedController::class, 'edit'])->name('satisfied-edit');
+Route::put('/satisfied-update/{id}', [SatisfiedController::class, 'update'])->name('satisfied-update');

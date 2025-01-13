@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Carousel;
+use App\Models\Satisfied;
 use Illuminate\Support\Facades\DB;
 
-class CarouselController extends Controller
+class SatisfiedController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $dataHeadHomes = DB::table('carousels')->get();
+        $dataHeadHomes = DB::table('satisfieds')->get();
 
         // หากมีข้อมูลใน table ให้โยนไปที่ index
-        return view('backend.carousel.index', ['dataHeadHomes' => $dataHeadHomes]);
+        return view('backend.satisfied.index', ['dataHeadHomes' => $dataHeadHomes]);
     }
 
     /**
@@ -24,7 +24,7 @@ class CarouselController extends Controller
      */
     public function create()
     {
-        return view('backend.carousel.create');
+        return view('backend.satisfied.create');
     }
 
     /**
@@ -40,7 +40,7 @@ class CarouselController extends Controller
             'image.mimes' => 'ภาพต้องเป็นไฟล์ประเภท jpg, png, jpeg หรือ webp',
 
         ]);
-        $member = new Carousel;
+        $member = new Satisfied;
 
 
 
@@ -53,7 +53,7 @@ class CarouselController extends Controller
         $member->save();
 
 
-        return redirect('carousel')->with('message', "บันทึกสำเร็จ");
+        return redirect('satisfied')->with('message', "บันทึกสำเร็จ");
     }
 
     /**
@@ -69,10 +69,10 @@ class CarouselController extends Controller
      */
     public function edit(string $id)
     {
-        $dataHeadHomes =  Carousel::find($id);
+        $dataHeadHomes =  Satisfied::find($id);
 
 
-        return view('backend.carousel.edit', ['dataHeadHomes' => $dataHeadHomes]);
+        return view('backend.satisfied.edit', ['dataHeadHomes' => $dataHeadHomes]);
     }
 
     /**
@@ -91,7 +91,7 @@ class CarouselController extends Controller
         ]);
 
 
-        $member =   Carousel::find($id);
+        $member =   Satisfied::find($id);
 
 
 
@@ -114,7 +114,7 @@ class CarouselController extends Controller
         $member->save();
 
 
-        return redirect('carousel')->with('message', "บันทึกสำเร็จ");
+        return redirect('satisfied')->with('message', "บันทึกสำเร็จ");
     }
 
     /**
