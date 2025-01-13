@@ -12,7 +12,13 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', function () {
     $dataHeadHomes = DB::table('head_homes')
         ->get();
-    return view('welcome', compact('dataHeadHomes'));
+    $dataCustomerServices = DB::table('customer_services')
+        ->get();
+    $dataAboutUs = DB::table('about_us')
+        ->get();
+    $dataServiceFeatures = DB::table('service_features')
+        ->get();
+    return view('welcome', compact('dataHeadHomes', 'dataCustomerServices', 'dataAboutUs', 'dataServiceFeatures'));
 });
 
 Auth::routes();

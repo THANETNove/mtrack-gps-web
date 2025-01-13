@@ -122,73 +122,59 @@
             <div class="site-section  border-bottom">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                            <div class="media custom-media">
-                                <div class="mr-3 icon"><span class="flaticon-window display-4"></span></div>
-                                <div class="media-body">
-                                    <h5 class="mt-0">Innovative Structure</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin..
+                        @foreach ($dataCustomerServices->take(3) as $customerServices)
+                            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                                <div class="media custom-media">
+                                    <div class="mr-3 icon">
+                                        <img src="{{ URL::asset($customerServices->image) }}" alt="Image"
+                                            class="img-fluid" width="150" height="150">
+                                    </div>
+                                    <div class="media-body">
+                                        {!! $customerServices->details !!}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                            <div class="media custom-media">
-                                <div class="mr-3 icon"><span class="flaticon-sit-down display-4"></span></div>
-                                <div class="media-body">
-                                    <h5 class="mt-0">Arhictectural</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin..
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-                            <div class="media custom-media">
-                                <div class="mr-3 icon"><span class="flaticon-turned-off display-4"></span></div>
-                                <div class="media-body">
-                                    <h5 class="mt-0">Interior Design</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                    sollicitudin..
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
 
 
 
-            <div class="site-section about-section" id="about-section">
-                <div class="container">
-                    <div class="row align-items-center mb-5 pb-5">
-                        <div class="col-lg-7 img-years mb-5 mb-lg-0">
-                            <img src="{{ URL::asset('/assets/frontend/images/hero_bg_1.jpg') }}" alt="Image"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-lg-4 ml-auto">
-                            <span class="sub-title">Learn To Know</span>
-                            <h3 class="mb-4">About Us</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga
-                                ipsum commodi aliquid aspernatur reiciendis enim cum voluptas id itaque, asperiores modi,
-                                voluptatibus sed voluptate nulla et ratione aliquam! Quaerat.</p>
-                            <ul class="list-unstyled ul-check text-left success mb-5">
-                                <li>Asperiores modi sed</li>
-                                <li>Enim cum voluptas</li>
-                                <li>Commodi aliquid aspernatur</li>
-                                <li>Cupiditate fuga ipsum commodi</li>
-                            </ul>
-                            <p><a href="#" class="btn btn-primary btn-lg rounded-0">Read More About Us</a></p>
+            @foreach ($dataAboutUs as $index => $aboutUs)
+                @if ($loop->index % 2 == 0)
+                    {{-- ถ้า index เป็นเลขคู่ --}}
+                    <div class="site-section about-section" id="about-section">
+                        <div class="container">
+                            <div class="row align-items-center mb-5 pb-5">
+                                <div class="col-lg-7 img-years mb-5 mb-lg-0">
+                                    <img src="{{ URL::asset($aboutUs->image) }}" alt="Image" class="img-fluid">
+                                </div>
+                                <div class="col-lg-4 ml-auto">
+
+                                    {!! $aboutUs->details !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
+                @else
+                    {{-- ถ้า index เป็นเลขคี่ --}}
+                    <div class="site-section about-section" id="about-section">
+                        <div class="container">
+                            <div class="row align-items-center mb-5 pb-5">
+                                <div class="col-lg-4 ml-auto">
 
+                                    {!! $aboutUs->details !!}
+                                </div>
+                                <div class="col-lg-7 img-years mb-5 mb-lg-0">
+                                    <img src="{{ URL::asset($aboutUs->image) }}" alt="Image" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
 
-                </div>
-            </div>
 
 
             <div class="site-section" id="our-team-section">
@@ -203,195 +189,29 @@
                     </div>
 
                     <div class="row">
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="person">
-                                <div class="bio-img">
-                                    <figure>
-                                        <img src="{{ URL::asset('/assets/frontend/images/person_1.jpg') }}" alt="Image"
-                                            class="img-fluid">
-                                    </figure>
-                                    <div class="social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
+                        @foreach ($dataServiceFeatures as $serviceFeatures)
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="person">
+                                    <div class="bio-img">
+                                        <figure>
+                                            <img src="{{ URL::asset($serviceFeatures->image) }}" alt="Image"
+                                                class="img-fluid">
+                                        </figure>
+                                        {{--  <div class="social">
+                                            <a href="#"><span class="icon-facebook"></span></a>
+                                            <a href="#"><span class="icon-twitter"></span></a>
+                                            <a href="#"><span class="icon-instagram"></span></a>
+                                        </div> --}}
                                     </div>
+
+                                    <p>{!! $aboutUs->details !!}</p>
                                 </div>
-                                <h2>Cloe Marena</h2>
-                                <span class="sub-title d-block mb-3">Architect</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis
-                                    qui doloribus perspiciatis ipsa modi accusantium repellat.</p>
                             </div>
-                        </div>
+                        @endforeach
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="person">
-                                <div class="bio-img">
-                                    <figure>
-                                        <img src="{{ URL::asset('/assets/frontend/images/person_2.jpg') }}" alt="Image"
-                                            class="img-fluid">
-                                    </figure>
-                                    <div class="social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                    </div>
-                                </div>
-                                <h2>John Rooster</h2>
-                                <span class="sub-title d-block mb-3">Designer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis
-                                    qui doloribus perspiciatis ipsa modi accusantium repellat.</p>
 
-                            </div>
-                        </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="person">
-                                <div class="bio-img">
-                                    <figure>
-                                        <img src="{{ URL::asset('/assets/frontend/images/person_3.jpg') }}" alt="Image"
-                                            class="img-fluid">
-                                    </figure>
-                                    <div class="social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                    </div>
-                                </div>
-                                <h2>Will Turner</h2>
-                                <span class="sub-title d-block mb-3">Designer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis
-                                    qui doloribus perspiciatis ipsa modi accusantium repellat.</p>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="person">
-                                <div class="bio-img">
-                                    <figure>
-                                        <img src="{{ URL::asset('/assets/frontend/images/person_4.jpg') }}" alt="Image"
-                                            class="img-fluid">
-                                    </figure>
-                                    <div class="social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                    </div>
-                                </div>
-                                <h2>Nicolas Stainer</h2>
-                                <span class="sub-title d-block mb-3">Engineer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis
-                                    qui doloribus perspiciatis ipsa modi accusantium repellat.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="person">
-                                <div class="bio-img">
-                                    <figure>
-                                        <img src="{{ URL::asset('/assets/frontend/images/person_5.jpg') }}" alt="Image"
-                                            class="img-fluid">
-                                    </figure>
-                                    <div class="social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                    </div>
-                                </div>
-                                <h2>George Brook</h2>
-                                <span class="sub-title d-block mb-3">Architect</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis
-                                    qui doloribus perspiciatis ipsa modi accusantium repellat.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="person">
-                                <div class="bio-img">
-                                    <figure>
-                                        <img src="{{ URL::asset('/assets/frontend/images/person_6.jpg') }}" alt="Image"
-                                            class="img-fluid">
-                                    </figure>
-                                    <div class="social">
-                                        <a href="#"><span class="icon-facebook"></span></a>
-                                        <a href="#"><span class="icon-twitter"></span></a>
-                                        <a href="#"><span class="icon-instagram"></span></a>
-                                    </div>
-                                </div>
-                                <h2>Emely Hopson</h2>
-                                <span class="sub-title d-block mb-3">Designer</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis
-                                    qui doloribus perspiciatis ipsa modi accusantium repellat.</p>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="site-section" id="pricing-section">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-7 text-center">
-                            <span class="sub-title">Pricing</span>
-                            <h2 class="font-weight-bold text-black">Choose Your Plan</h2>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi,
-                                explicabo, quasi. Magni deserunt sunt labore.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 pricing">
-                            <div class="border p-5 text-center rounded">
-                                <h3>Starter</h3>
-                                <div class="price mb-3"><sup class="currency">$</sup><span class="number">30</span> <span
-                                        class="per">/year</span></div>
-                                <p class="text-muted mb-4">* Billed annualy or $10 per month</p>
-                                <ul class="list-unstyled ul-check text-left success mb-5">
-                                    <li>Max 5 users</li>
-                                    <li>29 local security</li>
-                                    <li class="text-muted"><del>Desktop App</del></li>
-                                    <li class="text-muted"><del>Email Support</del></li>
-                                    <li class="text-muted"><del>Phone Support 24/7</del></li>
-                                </ul>
-                                <p><a href="#" class="btn btn-lg btn-primary rounded-0 btn-block">Buy Now</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 pricing">
-                            <div class="border p-5 text-center rounded">
-                                <h3>Professional</h3>
-                                <div class="price mb-3"><sup class="currency">$</sup><span class="number">72</span> <span
-                                        class="per">/year</span></div>
-                                <p class="text-muted mb-4">* Billed annualy or $30 per month</p>
-                                <ul class="list-unstyled ul-check text-left success mb-5">
-                                    <li>Max 10 users</li>
-                                    <li>29 local security</li>
-                                    <li>Desktop App</li>
-                                    <li>Email Support</li>
-                                    <li class="text-muted"><del>Phone Support 24/7</del></li>
-                                </ul>
-                                <p><a href="#" class="btn btn-lg btn-primary rounded-0 btn-block">Buy Now</a></p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 pricing">
-                            <div class="border p-5 text-center rounded">
-                                <h3>Enterprise</h3>
-                                <div class="price mb-3"><sup class="currency">$</sup><span class="number">130</span>
-                                    <span class="per">/year</span>
-                                </div>
-                                <p class="text-muted mb-4">* Billed annualy or $10 per month</p>
-                                <ul class="list-unstyled ul-check text-left success mb-5">
-                                    <li>Unlimitted users</li>
-                                    <li>29 local security</li>
-                                    <li>Desktop App</li>
-                                    <li>Email Support</li>
-                                    <li>Phone Support 24/7</li>
-                                </ul>
-                                <p><a href="#" class="btn btn-lg btn-primary rounded-0 btn-block">Buy Now</a></p>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -400,127 +220,8 @@
 
 
 
-            <div class="site-section" id="faq-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 mb-5 mb-lg-0">
-                            <img src="{{ URL::asset('/assets/frontend/images/about_2.jpg') }}" alt="Image"
-                                class="img-fluid">
-                        </div>
-
-                        <div class="col-lg-6 ml-auto pl-lg-5">
-                            <span class="sub-title">Ask Us, We Are Happy To Answer</span>
-                            <h2 class="font-weight-bold text-black mb-5">Frequently Ask Questions</h2>
-                            <div class="accordion" id="accordionExample">
 
 
-                                <div class="accordion-item">
-                                    <h2 class="mb-0 rounded mb-2">
-                                        <a href="#" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
-                                            How much you charge for a building?</a>
-                                    </h2>
-
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                        data-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p>Lorem ipsum dolor sit amet, <a href="#">Cnsectetur adipisicing</a>
-                                                elit. Eos quos incidunt, perspiciatis, ad saepe, magnam error adipisci vitae
-                                                ut provident alias! Odio debitis error ipsum molestiae voluptas accusantium
-                                                quibusdam animi, soluta explicabo asperiores aliquid, modi natus suscipit
-                                                deleniti. Corrupti, autem.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="mb-0 rounded mb-2">
-                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            What is your process?
-                                        </a>
-                                    </h2>
-
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                        data-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate
-                                                animi hic quasi sequi odio, vitae dolorum soluta sapiente debitis ad
-                                                similique tempore, aliquam quae nam deserunt dicta ullam perspiciatis
-                                                minima, quam. Quis repellat corporis aperiam, veritatis nemo iure inventore.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="mb-0 rounded mb-2">
-                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            How it works? Please let us know!
-                                        </a>
-                                    </h2>
-
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                        data-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum et dolorum
-                                                libero consequuntur facere molestias beatae quod labore quidem ad quasi eius
-                                                pariatur quae nam quo soluta optio dicta, doloribus ullam fugit nulla!
-                                                Itaque necessitatibus eum sed quam eos id!</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="mb-0 rounded mb-2">
-                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                            data-target="#collapseFour" aria-expanded="false"
-                                            aria-controls="collapseFour">
-                                            Is it free?
-                                        </a>
-                                    </h2>
-
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                        data-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quos incidunt,
-                                                perspiciatis, ad saepe, magnam error adipisci vitae ut provident alias! Odio
-                                                debitis error ipsum molestiae voluptas accusantium quibusdam animi, soluta
-                                                explicabo asperiores aliquid, modi natus suscipit deleniti. Corrupti, autem.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="mb-0 rounded mb-2">
-                                        <a href="#" class="collapsed" data-toggle="collapse"
-                                            data-target="#collapseFive" aria-expanded="false"
-                                            aria-controls="collapseFive">
-                                            Where to find you? Where is your location?
-                                        </a>
-                                    </h2>
-
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                        data-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quos incidunt,
-                                                perspiciatis, ad saepe, magnam error adipisci vitae ut provident alias! Odio
-                                                debitis error ipsum molestiae voluptas accusantium quibusdam animi, soluta
-                                                explicabo asperiores aliquid, modi natus suscipit deleniti. Corrupti, autem.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
             <div class="container site-section block-13 testimonial-wrap">
