@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HeadHomeController;
 use App\Http\Controllers\CustomerServiceController;
+use App\Http\Controllers\AboutUsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +22,9 @@ Route::get('/create-customer-service', [CustomerServiceController::class, 'creat
 Route::post('/customer-service-store', [CustomerServiceController::class, 'store'])->name('customer-service-store');
 Route::get('/customer-service-edit/{id}', [CustomerServiceController::class, 'edit'])->name('customer-service-edit');
 Route::put('/customer-service-update/{id}', [CustomerServiceController::class, 'update'])->name('customer-service-update');
+
+Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
+Route::get('/about-us-create', [AboutUsController::class, 'create'])->name('about-us-create');
+Route::post('/about-us-store', [AboutUsController::class, 'store'])->name('about-us-store');
+Route::get('/about-us-edit/{id}', [AboutUsController::class, 'edit'])->name('about-us-edit');
+Route::put('/about-us-update/{id}', [AboutUsController::class, 'update'])->name('about-us-update');

@@ -17,7 +17,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Bordered Table</h4>
+                        <h4 class="card-title">Head Home Table</h4>
                         <div class="table-responsive">
                             <table class="table table-bordered verticle-middle">
                                 <thead>
