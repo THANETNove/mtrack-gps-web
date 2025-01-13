@@ -9,8 +9,8 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-4">AboutUs</h4>
-                        <form method="POST" action="{{ route('about-us-store') }}" enctype="multipart/form-data">
+                        <h4 class="card-title mb-4">บริการอื่นๆ</h4>
+                        <form method="POST" action="{{ route('service-feature-store') }}" enctype="multipart/form-data">
 
                             @csrf
                             <div class="basic-form mb-3">

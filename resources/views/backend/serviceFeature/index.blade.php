@@ -38,7 +38,7 @@
 
                                             </td>
 
-                                            <td><span><a href="{{ url('about-us-edit', $data->id) }}"><i
+                                            <td><span><a href="{{ url('service-feature-edit', $data->id) }}"><i
                                                             class="fa fa-pencil color-muted m-r-5"></i>
                                                     </a></span>
                                             </td>

@@ -32,3 +32,6 @@ Route::put('/about-us-update/{id}', [AboutUsController::class, 'update'])->name(
 
 Route::get('/service-feature', [ServiceFeatureController::class, 'index'])->name('service-feature');
 Route::get('/service-feature-create', [ServiceFeatureController::class, 'create'])->name('service-feature-create');
+Route::post('/service-feature-store', [ServiceFeatureController::class, 'store'])->name('service-feature-store');
+Route::get('/service-feature-edit/{id}', [ServiceFeatureController::class, 'edit'])->name('service-feature-edit');
+Route::put('/service-feature-update/{id}', [ServiceFeatureController::class, 'update'])->name('service-feature-update');

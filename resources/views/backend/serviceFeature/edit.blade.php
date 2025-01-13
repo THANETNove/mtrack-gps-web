@@ -9,8 +9,8 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-4">Edit AboutUs</h4>
-                        <form method="POST" action="{{ route('about-us-update', $dataHeadHomes->id) }}"
+                        <h4 class="card-title mb-4">Edit บริการอื่นๆ</h4>
+                        <form method="POST" action="{{ route('service-feature-update', $dataHeadHomes->id) }}"
                             enctype="multipart/form-data">
 
                             @csrf
